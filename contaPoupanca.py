@@ -10,7 +10,7 @@ class ContaPoupanca(Conta):
         self._saldo += valor_a_ser_depositado
 
     def sacar(self, valor_a_ser_sacado: float):
-        self._saldo -+ valor_a_ser_sacado
+        self._saldo -= valor_a_ser_sacado
     
     def verificar_saldo(self):
         return self._saldo
