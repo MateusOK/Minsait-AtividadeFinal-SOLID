@@ -30,3 +30,6 @@ contaPoupanca.verificar_saldo()#Saldo após saque de 70
 contaCorrente.verificar_saldo() #Verificando saldo
 contaCorrente.verificar_limite() #Verificando limite da conta
 contaCorrente.sacar(2000) #Saque maior que saldo e limites somados, Exception deve ser lançada
+
+contaCorrente.depositar(-200) #Exception é lançada caso o depósito seja um quantia negativa
+contaCorrente.sacar(-100) #Exception é lançada caso o saque seja um quantia negativa
