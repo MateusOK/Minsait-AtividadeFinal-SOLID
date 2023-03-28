@@ -42,6 +42,9 @@ class ContaPoupanca(Conta):
         else:
             tempo_fracionado = float(tempo_de_rendimento[:-1]) / unidades_de_tempo[unidade_de_tempo_escolhida] #Se a unidade de tempo não for 'min', excluímos a ultima letra da string tempo fornecida e divimos pela unidade de tempo correspondente
 
+        if tempo_fracionado <=0:
+            raise ValueError("Valor de tempo nãp pode ser negativo") #Verifica se oa valor de tempo informado é negativo, se sim, uma exception é lançada
+       
         # Cálculo do saldo com rendimento
         return self._saldo * (1 + self.taxa_de_rendimento/100) ** tempo_fracionado
     
