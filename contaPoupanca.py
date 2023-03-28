@@ -13,7 +13,7 @@ class ContaPoupanca(Conta):
         self._saldo -= valor_a_ser_sacado
     
     def verificar_saldo(self):
-        return self._saldo
+        print("Saldo atual: ", self._saldo)
 
     def verificar_rendimento_ao_ano(self, tempo_de_rendimento):
         unidades_de_tempo = {
