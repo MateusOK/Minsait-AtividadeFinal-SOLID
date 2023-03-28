@@ -17,3 +17,6 @@ class ContaCorrente(Conta):
     def verificar_saldo(self):
         print("Saldo atual: ", self._saldo)
 
+    def verificar_limite(self):
+        print("Seu limite é: ", self.limite)
+
