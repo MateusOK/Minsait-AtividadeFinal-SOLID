@@ -27,5 +27,6 @@ contaPoupanca.sacar(70) #Sacando 70 da conta
 contaPoupanca.verificar_saldo()#Saldo após saque de 70
 
 #TESTE EXCEPTION VALUEERROR
-contaCorrente.verificar_saldo()
+contaCorrente.verificar_saldo() #Verificando saldo
+contaCorrente.verificar_limite() #Verificando limite da conta
 contaCorrente.sacar(2000) #Saque maior que saldo e limites somados, Exception deve ser lançada
