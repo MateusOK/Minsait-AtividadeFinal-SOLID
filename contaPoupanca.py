@@ -7,10 +7,14 @@ class ContaPoupanca(Conta):
         self.taxa_de_rendimento = taxa_de_rendimento
 
     def depositar(self, valor_a_ser_depositado: float):
-        self._saldo += valor_a_ser_depositado
+        if valor_a_ser_depositado <= 0: #Verifica se o valor a ser depositado é negativo, se sim, uma exception do tipo ValueError é lançada
+            raise ValueError("Valor a ser depositado não pode ser negativo")
+        else: self._saldo += valor_a_ser_depositado
 
     def sacar(self, valor_a_ser_sacado: float):
-        self._saldo -= valor_a_ser_sacado
+        if valor_a_ser_sacado <= 0: #Verifica se o valor a ser sacado é negativo, se sim, uma exception do tipo ValueError é lançada
+            raise ValueError("Valor a ser sacado não pode ser negativo")
+        else: self._saldo -= valor_a_ser_sacado
     
     def verificar_saldo(self):
         print("Saldo atual: ", self._saldo)
